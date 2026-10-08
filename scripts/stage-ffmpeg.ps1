@@ -8,5 +8,7 @@ foreach($name in @('ffmpeg.exe','ffprobe.exe')) {
   Copy-Item -LiteralPath $source -Destination (Join-Path $destination $name) -Force
 }
 Get-ChildItem -LiteralPath $Directory -Filter '*.dll' -File | ForEach-Object {Copy-Item -LiteralPath $_.FullName -Destination $destination -Force}
-Get-ChildItem -LiteralPath $LicenseDirectory -File | Where-Object {$_.Name -match 'LICENSE|COPYING|NOTICE'} | ForEach-Object {Copy-Item -LiteralPath $_.FullName -Destination $destination -Force}
+$licenseFiles=@(Get-ChildItem -LiteralPath $LicenseDirectory -File | Where-Object {$_.Name -match 'LICENSE|COPYING|NOTICE'})
+if($licenseFiles.Count -eq 0){throw 'No license or notice files were supplied.'}
+$licenseFiles | ForEach-Object {Copy-Item -LiteralPath $_.FullName -Destination $destination -Force}
 Write-Output 'Staged media tools. Preserve the exact build configuration, licenses and matching source for distribution.'
