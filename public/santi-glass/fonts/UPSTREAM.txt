@@ -1,0 +1,3 @@
+Open Runde: https://github.com/lauridskern/open-runde
+Commit: 3e7ed7f3cdfa5523766db7e430066472615fc935
+License: SIL Open Font License 1.1

@@ -1,0 +1,30 @@
+:root[data-theme]{--canvas:var(--surface-grouped);--ink:var(--label);--muted:var(--label-secondary);--border:var(--separator);--focus:var(--focus-ring);--switch-on:var(--accent);--success-text:var(--label);--titlebar-height:44px;--sidebar-width:216px;font-family:var(--font-text);font-size:16px;font-synthesis:none;color:var(--label);background:var(--canvas);-webkit-font-smoothing:antialiased}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=light] .brand .mark img,:root[data-theme=light] .titlebar-drag img{filter:invert(1)}
+.topbar-actions{display:flex;align-items:center;gap:20px}
+.appearance{position:relative}
+.appearance-trigger{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;background:var(--fill-tertiary);border:.5px solid var(--border);border-radius:var(--radius-pill);font-size:13px;color:var(--label)}
+.appearance-trigger:hover{background:var(--fill-secondary)}
+.appearance-trigger>svg:last-child{transition:transform var(--sp-snappy-ms) var(--sp-snappy)}
+.appearance-trigger[aria-expanded=true]>svg:last-child{transform:rotate(180deg)}
+.appearance-panel.sg-glass{position:absolute;right:0;top:calc(100% + 8px);width:280px;max-width:calc(100vw - 32px);border-radius:24px;padding:16px;z-index:100;animation:harbor-menu var(--sp-gentle-ms) var(--sp-gentle) both;transform-origin:100% 0}
+.appearance-panel h2{font-size:12px;font-weight:600;color:var(--muted);margin:0 0 12px}
+.appearance-theme{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;min-height:44px;margin-bottom:12px}
+.appearance-segment{display:flex;padding:3px;background:var(--fill-tertiary);border-radius:var(--radius-pill)}
+.appearance-segment>button{min-width:60px;min-height:44px;padding:0 10px;background:transparent;border:0;border-radius:var(--radius-pill);font-size:13px;color:var(--label)}
+.appearance-panel .glass-toggle{border-top:.5px solid var(--border);padding-top:12px;width:100%;font-size:14px;min-height:56px}
+.appearance-panel p{font-size:12px;color:var(--muted);line-height:1.5;padding:10px 12px;background:var(--fill-tertiary);border-radius:12px;margin-top:12px}
+.topbar.sg-glass{overflow:visible}
+html{scroll-behavior:smooth;scroll-padding-top:112px}
+@media(max-width:1100px){:root[data-theme]{--sidebar-width:180px}}
+@media(max-width:850px){:root[data-theme]{--sidebar-width:160px}.topbar-actions{gap:8px}}
+@media(max-width:600px){.topbar-actions .local{display:none}.appearance-panel.sg-glass{right:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.appearance-panel{animation:none!important}}
+
+/* Same Apple Music rim material used in Mono's website toolbar. */
+:root[data-theme]{--lens-bezel:22px;--lens-depth:34px;--lens-aberration:.015;--lens-frost:.65px;--lens-frost-strong:2.4px;--lens-specular:.16;--lens-saturation:1.1}
+:root[data-theme=dark]{--glass-tint:linear-gradient(180deg,rgb(43 43 43 / .72),rgb(30 30 30 / .66));--glass-tint-strong:linear-gradient(180deg,rgb(38 38 38 / .86),rgb(27 27 27 / .80));--glass-rim-top:rgb(255 255 255 / .28);--glass-rim-bottom:rgb(255 255 255 / .16);--glass-rim-edge:rgb(255 255 255 / .10);--glass-soft-light:rgb(255 255 255 / .045)}
+:root[data-theme=light]{--glass-tint:linear-gradient(180deg,rgb(255 255 255 / .66),rgb(246 246 248 / .56));--glass-tint-strong:linear-gradient(180deg,rgb(255 255 255 / .82),rgb(246 246 248 / .76));--glass-rim-top:rgb(255 255 255 / .75);--glass-rim-bottom:rgb(0 0 0 / .10);--glass-rim-edge:rgb(255 255 255 / .22);--glass-soft-light:rgb(255 255 255 / .12)}
+.sg-glass.sg-lens-on::after{background:none;opacity:1;box-shadow:inset 0 1px 1px var(--glass-rim-top),inset 0 -1px 1px var(--glass-rim-bottom),inset 1px 0 1px var(--glass-rim-edge),inset -1px 0 1px var(--glass-rim-edge),inset 0 5px 8px -4px var(--glass-soft-light)}
+.topbar{--lens-frost-strong:var(--lens-frost)}
+

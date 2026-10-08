@@ -1,0 +1,288 @@
+@font-face {font-family:"Open Runde";src:url("fonts/OpenRunde-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+@font-face {font-family:"Open Runde";src:url("fonts/OpenRunde-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap;}
+@font-face {font-family:"Open Runde";src:url("fonts/OpenRunde-Semibold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap;}
+@font-face {font-family:"Open Runde";src:url("fonts/OpenRunde-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
+/* Mono open-source edition. Open Runde is licensed under OFL-1.1. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root,
+[data-theme="light"] {
+  --surface: #ffffff;
+  --surface-grouped: #f2f2f7;
+  --surface-elevated: #ffffff;
+  --glass-fill: rgba(255, 255, 255, 0.62);
+  --glass-fill-strong: rgba(255, 255, 255, 0.86);
+  --glass-tint: rgba(255, 255, 255, 0.20);
+  --glass-tint-strong: rgba(255, 255, 255, 0.64);
+  --glass-sheen: rgba(255, 255, 255, 0.35);
+  --glass-stroke: rgba(255, 255, 255, 0.75);
+  --glass-selection: rgba(0, 0, 0, 0.07);
+  --fill-secondary: rgba(120, 120, 128, 0.24);
+  --fill-tertiary: rgba(118, 118, 128, 0.14);
+  --separator: rgba(60, 60, 67, 0.29);
+  --label: #000000;
+  --label-secondary: #636366;
+  --accent: #0071e3;
+  --on-accent: #ffffff;
+  --accent-text: #0066cc;
+  --accent-tint: rgba(0, 113, 227, 0.12);
+  --focus-ring: #0071e3;
+  --knob: #ffffff;
+  --seg-selected: #ffffff;
+  --switch-on: #34c759;
+  --success-text: #1f7a35;
+  --danger: #d70015;
+  --danger-text: #d70015;
+  --warning-text: #c93400;
+  --wall-blue: #0a84ff;
+  --wall-indigo: #5e5ce6;
+  --wall-pink: #ff375f;
+  --wall-yellow: #ffd60a;
+  --wall-teal: #40c8e0;
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-glass-edge: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  --shadow-knob: 0 3px 8px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.16);
+  --shadow-solid: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+  --surface: #1c1c1e;
+  --surface-grouped: #000000;
+  --surface-elevated: #2c2c2e;
+  --glass-fill: rgba(44, 44, 46, 0.62);
+  --glass-fill-strong: rgba(28, 28, 30, 0.86);
+  --glass-tint: rgba(24, 24, 26, 0.28);
+  --glass-tint-strong: rgba(28, 28, 30, 0.66);
+  --glass-sheen: rgba(255, 255, 255, 0.10);
+  --glass-stroke: rgba(255, 255, 255, 0.14);
+  --glass-selection: rgba(255, 255, 255, 0.12);
+  --fill-secondary: rgba(120, 120, 128, 0.40);
+  --fill-tertiary: rgba(118, 118, 128, 0.26);
+  --separator: rgba(84, 84, 88, 0.65);
+  --label: #ffffff;
+  --label-secondary: #aeaeb2;
+  --accent: #0070e0;
+  --accent-text: #409cff;
+  --accent-tint: rgba(10, 132, 255, 0.20);
+  --focus-ring: #409cff;
+  --seg-selected: #636366;
+  --switch-on: #30d158;
+  --success-text: #30d158;
+  --danger-text: #ff6961;
+  --warning-text: #ffb340;
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.55);
+  --shadow-glass-edge: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --shadow-solid: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --surface: #1c1c1e;
+    --surface-grouped: #000000;
+    --surface-elevated: #2c2c2e;
+    --glass-fill: rgba(44, 44, 46, 0.62);
+    --glass-fill-strong: rgba(28, 28, 30, 0.86);
+    --glass-tint: rgba(24, 24, 26, 0.28);
+    --glass-tint-strong: rgba(28, 28, 30, 0.66);
+    --glass-sheen: rgba(255, 255, 255, 0.10);
+    --glass-stroke: rgba(255, 255, 255, 0.14);
+    --glass-selection: rgba(255, 255, 255, 0.12);
+    --fill-secondary: rgba(120, 120, 128, 0.40);
+    --fill-tertiary: rgba(118, 118, 128, 0.26);
+    --separator: rgba(84, 84, 88, 0.65);
+    --label: #ffffff;
+    --label-secondary: #aeaeb2;
+    --accent: #0070e0;
+    --accent-text: #409cff;
+    --accent-tint: rgba(10, 132, 255, 0.20);
+    --focus-ring: #409cff;
+    --seg-selected: #636366;
+    --switch-on: #30d158;
+    --success-text: #30d158;
+    --danger-text: #ff6961;
+    --warning-text: #ffb340;
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.55);
+    --shadow-glass-edge: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    --shadow-solid: 0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-11: 44px;
+  --radius-xs: 7px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+  --blur-glass: 24px;
+  --blur-glass-strong: 40px;
+  --lens-bezel: 28px;
+  --lens-depth: 26px;
+  --lens-ior: 1.5;
+  --lens-aberration: 0.12;
+  --lens-frost: 1.5px;
+  --lens-frost-strong: 7px;
+  --lens-specular: 0.6;
+  --lens-saturation: 1.5;
+  --font-display: "Open Runde", system-ui, sans-serif;
+  --font-text: "Open Runde", system-ui, sans-serif;
+  --font-rounded: "Open Runde", system-ui, sans-serif;
+  --font-mono: "Open Runde", system-ui, sans-serif;
+}
+
+.large-title {
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 41px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.title-1 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+  letter-spacing: 0.38px;
+}
+
+.title-2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: -0.26px;
+}
+
+.title-3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: -0.45px;
+}
+
+.headline {
+  font-family: var(--font-text);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: -0.43px;
+}
+
+.body {
+  font-family: var(--font-text);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: -0.43px;
+}
+
+.callout {
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: -0.31px;
+}
+
+.subheadline {
+  font-family: var(--font-text);
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: -0.23px;
+}
+
+.footnote {
+  font-family: var(--font-text);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: -0.08px;
+}
+
+.caption-1 {
+  font-family: var(--font-text);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.caption-2 {
+  font-family: var(--font-text);
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06px;
+}
+
+.numeral {
+  font-family: var(--font-rounded);
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}

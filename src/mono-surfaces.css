@@ -1,0 +1,25 @@
+/* Glass is permission to reveal content, never a decorative empty material. */
+.sg-glass:not([data-content-behind="true"]),
+.sg-glass.sg-lens-on:not([data-content-behind="true"]) {
+  background:var(--surface-elevated)!important;
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+  border-color:var(--separator)!important;box-shadow:var(--shadow-solid)!important;
+}
+.sg-glass:not([data-content-behind="true"])>.sg-lens-layer,
+.sg-glass:not([data-content-behind="true"])::after {display:none!important}
+.mono-scrollbars,.mono-scrollbars *{scrollbar-width:none!important;scrollbar-gutter:auto!important}
+.mono-scrollbars::-webkit-scrollbar,.mono-scrollbars *::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+.mono-scrollbar-layer{position:static;pointer-events:none;z-index:auto}
+.mono-scroll-track{position:fixed;pointer-events:auto;touch-action:none;border-radius:var(--radius-pill,999px);background:transparent}
+.mono-scroll-track[hidden]{display:none}
+.mono-scroll-thumb{position:absolute;top:0;left:0;touch-action:none;cursor:grab;outline:none;border-radius:var(--radius-pill,999px)}
+.mono-scroll-thumb-ink{position:absolute;background:var(--label-tertiary,var(--label-secondary));border-radius:var(--radius-pill,999px);opacity:.6;transition:background-color 160ms ease-out,opacity 160ms ease-out}
+.mono-scroll-track[data-axis="y"] .mono-scroll-thumb-ink{inset:3px 6px}
+.mono-scroll-track[data-axis="x"] .mono-scroll-thumb-ink{inset:6px 3px}
+.mono-scroll-track:hover .mono-scroll-thumb-ink{background:var(--label-secondary);opacity:.9}
+.mono-scroll-thumb:focus-visible{outline:2px solid var(--focus-ring);outline-offset:-2px}
+.mono-scroll-thumb:focus-visible .mono-scroll-thumb-ink{background:var(--accent);opacity:1}
+.mono-scroll-track.is-dragging .mono-scroll-thumb{cursor:grabbing}
+.mono-scroll-track.is-dragging .mono-scroll-thumb-ink{background:var(--accent);opacity:1}
+@media(prefers-reduced-motion:reduce){.mono-scroll-thumb-ink{transition:none}}
+@media(forced-colors:active){.mono-scroll-thumb-ink{background:CanvasText;opacity:1;forced-color-adjust:none}.mono-scroll-thumb:focus-visible{outline-color:Highlight}}

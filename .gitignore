@@ -1,0 +1,16 @@
+node_modules/
+dist/
+src-tauri/target/
+src-tauri/gen/
+native/bin/
+native/obj/
+website/
+*.exe
+*.dll
+*.pdb
+*.log
+*.zip
+*.env
+.env*
+.DS_Store
+.test-output/
